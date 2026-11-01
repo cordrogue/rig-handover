@@ -24,6 +24,30 @@ in a shell this agent can run.
 
 6. Record every issue URL from gh's output (not from memory) and reply with the list.
 
+## What every issue carries
+
+Approved by the human for plan morning-digest; use it unless they change it. Label
+`plan:<plan name>`, and a body in this order:
+
+```md
+Source: plan.md § <n>
+
+## Scope
+
+<what the section asks, in the plan's words; the ADRs and styleguide rules it touches>
+
+## Done when
+
+<the section's "Done when", unchanged>
+
+## Blocked by
+
+<#n (what exactly is needed from it), or —>
+```
+
+An issue that waits on someone outside the repo (a reviewer, a human) names that in
+Blocked by and stays open until they have answered; "sent" is not "done".
+
 Closing one, with the closing comment from AGENTS.md:
 
 ```sh
